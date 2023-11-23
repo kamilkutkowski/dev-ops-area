@@ -1,0 +1,6 @@
+- hosts: pi
+  become: yes
+  roles:
+    - common
+  tags:
+    - pi
