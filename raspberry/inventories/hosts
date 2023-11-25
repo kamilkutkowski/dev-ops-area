@@ -1,2 +1,2 @@
 [pi]
-localhost ansible_host=192.168.0.66 ansible_user=pi
+192.168.0.20 ansible_ssh_user=mrrobot

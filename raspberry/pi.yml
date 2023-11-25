@@ -1,6 +1,18 @@
+---
 - hosts: pi
+  gather_facts: yes
   become: yes
-  roles:
-    - common
-  tags:
-    - pi
+  
+  tasks:
+    - name: Installing mc
+      action: >
+         {{ ansible_pkg_mgr }} name=mc state=present update_cache=yes
+
+    - name: Create_file
+      file:
+        path: /mrrobot.txt
+        state: touch
+  # roles:
+  #   - common
+  # tags:
+  #   - pi
